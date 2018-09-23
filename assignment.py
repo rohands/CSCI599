@@ -4,7 +4,7 @@ from sklearn import tree, cross_validation, neighbors
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score, f1_score
 from sklearn.metrics import confusion_matrix, classification_report
 
-path = '/Users/rohands/Desktop/DS/Tweets.csv'
+path = 'Tweets.csv'
 data = pd.read_csv(path)
 print list(data)
 
