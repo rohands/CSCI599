@@ -42,7 +42,6 @@ for train_index, test_index in kf:
     print('\tPrediction: ', y_pred)
     print('\tCorrect:    ', y_test)
     print('\tAccuracy:', acc)
-#     print(classification_report(y_test, y_pred, target_names=iris.target_names))
 
 print("Average Accuracy: %0.3f" % (totacc / folds,))
 print(classification_report(ytlog, yplog, target_names=data.airline_sentiment.unique()))
