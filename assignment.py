@@ -18,7 +18,7 @@ print vector.shape
 vecarray = vector.toarray()
 
 clf = tree.DecisionTreeClassifier(criterion='entropy')
-folds = 2
+folds = 10
 kf = cross_validation.KFold(len(vecarray), n_folds=folds, shuffle=True)
 foldid = 0
 totacc = 0.
