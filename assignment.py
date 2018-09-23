@@ -8,7 +8,7 @@ path = 'Tweets.csv'
 data = pd.read_csv(path)
 print list(data)
 
-vectorizer = TfidfVectorizer()
+vectorizer = TfidfVectorizer(sublinear_tf=True, stop_words='english')
 vectors = vectorizer.fit(data['text'])
 print vectorizer.idf_
 print len(vectorizer.vocabulary_)
