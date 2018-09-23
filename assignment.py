@@ -18,7 +18,7 @@ print vector.shape
 vecarray = vector.toarray()
 
 clf = tree.DecisionTreeClassifier(criterion='entropy')
-folds = 2
+folds = 10
 kf = cross_validation.KFold(len(vecarray), n_folds=folds, shuffle=True)
 foldid = 0
 totacc = 0.
@@ -42,7 +42,6 @@ for train_index, test_index in kf:
     print('\tPrediction: ', y_pred)
     print('\tCorrect:    ', y_test)
     print('\tAccuracy:', acc)
-#     print(classification_report(y_test, y_pred, target_names=iris.target_names))
 
 print("Average Accuracy: %0.3f" % (totacc / folds,))
 print(classification_report(ytlog, yplog, target_names=data.airline_sentiment.unique()))
